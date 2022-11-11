@@ -1,7 +1,7 @@
 /**
  * 
  */
-package assembled;
+package com.greatlearning.buildingskyscraper;
 
 import java.util.Arrays;
 import java.util.Scanner;
