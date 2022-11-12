@@ -14,7 +14,7 @@ import java.util.Stack;
  */
 public class AssembleingMain {
 
-	private static int noOfFlours, positionOfMaxSizeOfFlour;
+	private static int noOfFlours, positionOfMaxSizeFlour;
 	private static int[] arrOfFlours,sortedArrOfFlours;
 
 	/**
@@ -42,16 +42,19 @@ public class AssembleingMain {
 		Stack<Integer> stack = new Stack<Integer>();
 		System.out.println("The order of construction is as follows");
 		
-		positionOfMaxSizeOfFlour = noOfFlours-1;
+		positionOfMaxSizeFlour = noOfFlours-1;
 		
 		for(int i = 0; i<noOfFlours; i++ ) {
 			System.out.println("\nDay : " + (i+1));
 			stack.push(arrOfFlours[i]);
-			if(stack.peek()>=sortedArrOfFlours[positionOfMaxSizeOfFlour]) {
+			if(stack.peek()>=sortedArrOfFlours[positionOfMaxSizeFlour]) {
 				
 				while(stack.empty()==false) {
+					if(stack.peek()<=positionOfMaxSizeFlour)
+						break;
 					System.out.print(stack.pop() + " ");
-					positionOfMaxSizeOfFlour--;
+					positionOfMaxSizeFlour--;
+					
 				}
 				
 			}
