@@ -1,7 +1,10 @@
 package com.greatlearing.converstion.bst2skt;
 
+import java.util.LinkedList;
+
 public class BinarySearchTree {
 	
+	LinkedList<Integer> al=new LinkedList<Integer>();  
 	
 	//Node Creation
 	class Node{
@@ -16,8 +19,10 @@ public class BinarySearchTree {
 		
 	}
 	
+	
 
 	Node root;
+
 
 	BinarySearchTree(){
 		
@@ -52,18 +57,21 @@ public class BinarySearchTree {
 	
 	
 	
-	void inorder() {
+	LinkedList<Integer> inorderlist() {
 	    inorderRec(root);
+	    return al;
 	  }
 
 	  // Inorder Traversal
-	  void inorderRec(Node root) {
+	  void inorderRec(Node root) {  
 	    if (root != null) {
 	      inorderRec(root.left);
-	      System.out.print(root.key + " -> ");
+	      al.add(root.key);
 	      inorderRec(root.right);
 	    }
+	    
 	  }
+	  
 	
-	
+
 }
