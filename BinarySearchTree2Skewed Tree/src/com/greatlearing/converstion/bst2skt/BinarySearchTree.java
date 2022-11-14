@@ -16,6 +16,18 @@ public class BinarySearchTree {
 			left = right = null;
 			
 		}
+
+		public int getKey() {
+			return key;
+		}
+
+		public Node getLeft() {
+			return left;
+		}
+
+		public Node getRight() {
+			return right;
+		}
 		
 	}
 	

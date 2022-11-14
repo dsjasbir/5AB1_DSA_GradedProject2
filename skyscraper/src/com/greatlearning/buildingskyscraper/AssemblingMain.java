@@ -12,7 +12,7 @@ import java.util.Stack;
  * @author jasbirsingh
  *
  */
-public class AssembleingMain {
+public class AssemblingMain {
 
 	private static int noOfFlours, positionOfMaxSizeFlour;
 	private static int[] arrOfFlours,sortedArrOfFlours;
